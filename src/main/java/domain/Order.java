@@ -22,7 +22,7 @@ public class Order {
     private Delivery delivery;
 
     @OneToMany(mappedBy = "item")
-    private List<OrderItem> orderItems = new ArrayList<>();
+    private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
     private LocalDateTime orderDate;
 

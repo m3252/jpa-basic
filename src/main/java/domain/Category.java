@@ -24,5 +24,5 @@ public class Category {
     @JoinTable(name = "CATEGORY_ITEM",
             joinColumns = @JoinColumn(name = "CATEGORY_ID"),
             inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
-    private List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<Item>();
 }
