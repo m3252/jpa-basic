@@ -1,3 +1,4 @@
+import domain.Book;
 import domain.Member;
 import domain.Order;
 import domain.OrderItem;
@@ -16,15 +17,11 @@ public class JpaMain {
 
         tx.begin();
         try {
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("김영한");
 
-            Order order = new Order();
-            em.persist(order);
-            //order.addOrderItem(new OrderItem());
-
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrder(order);
-
-            em.persist(orderItem);
+            em.persist(book);
 
 
             tx.commit();
